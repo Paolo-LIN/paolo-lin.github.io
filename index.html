@@ -578,6 +578,66 @@
             line-height: 1.7;
         }
 
+        .file-list {
+            margin-top: 20px;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+        }
+
+        .file-list-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .file-item:last-child {
+            border-bottom: none;
+        }
+
+        .file-name {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            word-break: break-all;
+        }
+
+        .file-download {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 12px;
+            background: var(--red);
+            color: white;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .file-download:hover {
+            background: var(--red-dark);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .file-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+
         .project-tags {
             display: flex;
             flex-wrap: wrap;
@@ -830,7 +890,7 @@
                 <div class="project-card fade-in">
                     <div class="project-header">
                         <h3>仓储费用测算模型</h3>
-                        <div class="project-type">🏆 招牌作品</div>
+                        <div class="project-type">🏆 仓储费用滚动预测</div>
                     </div>
                     <div class="project-body">
                         <p>12个月链式滚动迭代的仓储成本预测模型，结合库龄分段与动销约束逻辑，支持 SKU-仓库维度下按 CBM/天费率精确计算。</p>
@@ -844,16 +904,60 @@
                 </div>
                 <div class="project-card fade-in">
                     <div class="project-header">
-                        <h3>跨境电商管报体系</h3>
+                        <h3>跨境电商主流平台管报模型/模板</h3>
                         <div class="project-type">📊 财务建模</div>
                     </div>
                     <div class="project-body">
-                        <p>覆盖 6 大跨境电商平台的 11 个管理报表模型，125个Sheet，31万+公式，2.6万跨表引用，实现数据驱动决策。</p>
+                        <p>覆盖 Amazon、沃尔玛、Shein、Target、Temu、速卖通等主流跨境电商平台的 10 套标准化管理报表模板，实现多平台数据自动化处理与管报输出。</p>
                         <div class="project-tags">
                             <span class="tag">管理报表</span>
                             <span class="tag">Amazon</span>
                             <span class="tag">Walmart</span>
                             <span class="tag">Shein</span>
+                            <span class="tag">Temu</span>
+                        </div>
+                        <div class="file-list">
+                            <div class="file-list-title">📎 模板下载</div>
+                            <div class="file-item">
+                                <span class="file-name">亚马逊月度管报模板</span>
+                                <a href="templates/亚马逊月度管报模板.xlsx" class="file-download" download>下载 ⬇</a>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-name">沃尔玛-CA-管报模板</span>
+                                <a href="templates/沃尔玛-CA-管报模板.xlsx" class="file-download" download>下载 ⬇</a>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-name">沃尔玛-US-管报模板</span>
+                                <a href="templates/沃尔玛-US-管报模板.xlsx" class="file-download" download>下载 ⬇</a>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-name">Shein-管报模板</span>
+                                <a href="templates/Shein-管报模板.xlsx" class="file-download" download>下载 ⬇</a>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-name">Target-管报模板</span>
+                                <a href="templates/Target-管报模板.xlsx" class="file-download" download>下载 ⬇</a>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-name">Temu-本土店管报模板</span>
+                                <a href="templates/Temu-本土店管报模板.xlsx" class="file-download" download>下载 ⬇</a>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-name">Temu-跨境店管报模板</span>
+                                <a href="templates/Temu-跨境店管报模板.xlsx" class="file-download" download>下载 ⬇</a>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-name">速卖通-收入表模板</span>
+                                <a href="templates/速卖通-收入表模板.xlsx" class="file-download" download>下载 ⬇</a>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-name">速卖通-收入汇总表-模板</span>
+                                <a href="templates/速卖通-收入汇总表-模板.xlsx" class="file-download" download>下载 ⬇</a>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-name">三方仓账单模型</span>
+                                <a href="templates/三方仓账单模型.xlsx" class="file-download" download>下载 ⬇</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -875,7 +979,7 @@
                 <div class="contact-card">
                     <div class="contact-icon">💼</div>
                     <h3>当前实习/工作单位</h3>
-                    <p>北京华青科技有限公司</p>
+                    <p>北京华青科技有限公司-财务BP实习生</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">📧</div>
