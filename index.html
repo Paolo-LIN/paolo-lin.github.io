@@ -296,7 +296,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 72px;
+            font-size: 48px;
+            font-weight: 700;
             color: white;
             box-shadow: 0 8px 40px rgba(219, 0, 7, 0.2);
         }
@@ -314,7 +315,7 @@
             .hero-avatar {
                 width: 160px;
                 height: 160px;
-                font-size: 48px;
+                font-size: 32px;
             }
             .hero-links {
                 justify-content: center;
@@ -468,6 +469,63 @@
             font-size: 15px;
             color: var(--text-gray);
             line-height: 1.7;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .experience-header h3 {
+            font-size: 18px;
+            margin: 0;
+            color: var(--text-dark);
+        }
+
+        .experience-role {
+            font-size: 15px;
+            color: var(--red);
+            font-weight: 600;
+        }
+
+        .experience-date {
+            font-size: 13px;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .experience-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .experience-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        .experience-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--red);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .experience-header {
+                flex-direction: column;
+                gap: 4px;
+            }
         }
 
         /* ===== 项目展示 ===== */
@@ -652,7 +710,7 @@
                     <a href="#contact" class="btn btn-outline">联系我</a>
                 </div>
             </div>
-            <div class="hero-avatar">PL</div>
+            <div class="hero-avatar">林善良</div>
         </div>
     </section>
 
@@ -665,15 +723,13 @@
                 <div class="about-card fade-in">
                     <h3>🎓 教育经历</h3>
                     <p>
-                        本科就读于深圳技术大学财务管理专业，主修课程包括财务管理，金融风险管理，经济学原理，微积分，线性代数，概率论与数理统计等，其中数学类课程均分89+。在校期间获得过新生奖学金二等奖，参加了2023-2024年度深圳技术大学寒假宣讲活动并担任组织。
+                        本科就读于深圳技术大学财务管理专业，主修课程包括财务管理，金融风险管理，经济学原理，微积分，线性代数，概率论与数理统计等，其中数学类课程均分89+。在校期间获得过新生奖学金二等奖，参加了2023-2024年度深圳技术大学寒假宣讲活动并担任组长。
                     </p>
                 </div>
                 <div class="about-card fade-in">
                     <h3>⚽ 兴趣爱好</h3>
                     <p>
-                        阿森纳足球俱乐部资深球迷，COYG! 🔴⚪<br>
-                        热爱大户外运动，喜欢探索户外装备与渔具品类市场。
-                        业余时间学习和研究数据分析与财务建模技术。
+                        热爱足球和篮球，平时喜欢听歌和钻研Excel建模。
                     </p>
                 </div>
                 <div class="about-card fade-in">
@@ -685,7 +741,7 @@
                 <div class="about-card fade-in">
                     <h3>🏅 证书</h3>
                     <p>
-                        CET-4,驾驶证
+                        CET-4 | 驾驶证C1
                     </p>
                 </div>
             </div>
@@ -725,20 +781,46 @@
             <div class="timeline">
                 <div class="timeline-item fade-in">
                     <div class="timeline-dot">📌</div>
-                    <div class="timeline-date">2026.04 - 2026.08</div>
-                    <h3>财务BP实习生 · 北京华青科技有限公司</h3>
-                    <p>
-                        负责跨境电商平台（Amazon、Shein、Target、Temu、AliExpress、Walmart）管理报表搭建与财务模型设计。
-                        核心成果：仓储费用测算模型（12个月链式滚动迭代、三层IF+DATEDIF嵌套、五级SKU分档判断）。
-                    </p>
+                    <div class="experience-header">
+                        <h3>北京华青科技有限公司</h3>
+                        <span class="experience-role">财务BP实习生</span>
+                        <span class="experience-date">2026.04 - 2026.08</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>运用FILTER+UNIQUE、IFERROR+XLOOKUP、IF函数嵌套等动态数组与组合函数，搭建「数据源→数据处理→管报输出」三层架构自动化管报模型，累计完成Amazon-SC、沃尔玛（CA/US双站点）、Temu（本土/跨境双模式）、速卖通等10套标准化管报模型，实现多平台报表数据自动化处理，人工制表时间缩减 70%，显著提升管报制作效率。</li>
+                        <li>设计并搭建全年度滚动仓储费用动态测算模型，基于 SKU 库龄分层计费及先进先出规则，联动多仓库收费标准、日销数据、库存周转等核心参数，实现仓储费用自动化测算与预测，为业务管控超期库存仓储成本提供数据预测支撑。</li>
+                        <li>负责Amazon、速卖通、TIKTOK等主流跨境电商平台后台数据的导出、清洗与整理，按时完成管理报表的编制出具，覆盖FBA/FBM双渠道、本土店/跨境店多业务模式。</li>
+                        <li>负责公司产品采购成本、关税、头程物流、尾程配送、售后退款等数据的导出及处理，维护管报成本数据准确性。</li>
+                        <li>对接各平台业务团队，解答经营数据疑问、同步成本与利润逻辑，支撑业务日常决策。</li>
+                    </ul>
                 </div>
                 <div class="timeline-item fade-in">
-                    <div class="timeline-dot">🎓</div>
-                    <div class="timeline-date">在读</div>
-                    <h3>深圳技术大学 · 会计学</h3>
-                    <p>
-                        会计学专业在读，系统学习专业核心课程。
-                    </p>
+                    <div class="timeline-dot">📊</div>
+                    <div class="experience-header">
+                        <h3>立信会计师事务所（特殊普通合伙）</h3>
+                        <span class="experience-role">审计实习生</span>
+                        <span class="experience-date">2026.01 - 2026.03</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>协助项目组完成多家上市公司、国企的年度审计，负责编制审计底稿，核对会计凭证、银行对账单、合同等原始资料，确保审计证据完整规范。</li>
+                        <li>协助完成试算平衡表、现场盘点、抽凭、函证收发与统计工作，发出银行及往来函证超100份，且实现高回函率。</li>
+                        <li>参与往来款、收入成本、费用等科目的审计核查，记录审计调整事项，推动审计流程高效推进。</li>
+                        <li>辅助收尾工作，整理归档全套审计底稿，协助整理报表附注基础数据，配合项目经理沟通企业财务人员获取补充资料。</li>
+                    </ul>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot">🧾</div>
+                    <div class="experience-header">
+                        <h3>深圳瑞博会计师事务所（普通合伙）</h3>
+                        <span class="experience-role">会计实习生</span>
+                        <span class="experience-date">2025.07 - 2025.09</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>为外资、零售、科技等多行业超30家企业完成账务凭证装订、财务资料分类整理工作，做到归档规范、零差错。</li>
+                        <li>协助完成记账凭证复核工作，通过账证核对发现数笔记账金额存在账实不符问题，及时反馈并推动整改，保障账务核算准确性。</li>
+                        <li>对接客户完成财务资料交接，协助会计师、税务师完成资料审核、账务整理等日常工作，提升团队基础工作效率。</li>
+                        <li>完成税务局外勤工作近十次，顺利办结税盘注销、发票缴销等事项，协助多家企业完成解除非正常状态、逾期申报处理等事项。</li>
+                    </ul>
                 </div>
             </div>
         </div>
